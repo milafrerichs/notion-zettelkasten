@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  div(class="mx-auto max-w-7xl sm:px-6 lg:px-8")
+    .grid.grid-cols-1.gap-4.mt-4(class='sm:grid-cols-2')
+      each resource in resources
+        include includes/card.jade

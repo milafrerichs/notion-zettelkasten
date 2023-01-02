@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .overflow-hidden.rounded-lg.bg-white.shadow.mt-8
+    .p-5
+        .flex.items-center
+          div
+              .ml-5.w-0.flex-1
+              dl
+              dt.text-sm.font-medium.text-gray-500 Resourcem, areas
+              dd
+              .text-2xl.font-medium.text-gray-900= note.title
+              .text-sm
+                each block in note.blocks
+                  case block.type
+                    when "paragraph"
+                      include includes/paragraph
+              a.font-medium.text-cyan-700(href='#' class='hover:text-cyan-900') Original
+
+  h2.text-3xl.mt-8 What does that remind you off?
+  .mt-8
+    include includes/note-form.jade
