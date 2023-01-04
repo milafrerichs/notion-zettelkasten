@@ -1,6 +1,7 @@
 form(action="/add-note" method="post" id="note").flex.flex-col
   input(type="hidden" name="resource" value=`${resource_id}`)
   input(type="hidden" name="note" value=`${note.id}`)
-  textarea(name="content" cols="50" rows="5").text-md.p-4
+  textarea(name="content" cols="50" rows="5").text-md.p-4.border.border-gray-300
 
-  input(type="submit" id="submitFormInput")
+  .mt-4
+    input(type="submit" id="submitFormInput").rounded-md.bg-indigo-600.text-sm.shadow-sm.inline-flex.text-white.px-4.py-2
